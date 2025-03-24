@@ -1,0 +1,32 @@
+import streamlit as st
+
+
+
+# Set up the page
+st.set_page_config(page_title="HOME", layout="wide")
+# Title and introduction
+st.title("🏠 Welcome to My Multi-Page Streamlit App!")
+
+st.write("Navigate through the sidebar to explore different sections.")
+
+# Display an image (optio
+
+# ABOUT SECTION
+st.subheader("ℹ️ About This App")
+st.write("""
+This app is designed as a **multi-page interactive dashboard** using **Streamlit**.  
+It includes:
+- A **Profile Page** where users can enter and display their details.
+- A **Contact Page** where users can submit a form to get in touch.
+- A **Data Dashboard (if needed)** for analytics and insights.
+
+### Why Use This App?
+✅ Easy navigation through different sections.  
+✅ Fully interactive with user input support.  
+✅ Great for project expos and personal portfolio showcases.  
+""")
+
+# Footer
+st.write("---")
+st.write("🔹 Developed with ❤️ using Streamlit.")
+
