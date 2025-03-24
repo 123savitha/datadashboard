@@ -1,0 +1,32 @@
+import streamlit as st
+
+
+st.title("🤵 Profile Page")
+
+
+
+st.write("Fill in your details to create your profile.")
+
+# Collect user details
+name = st.text_input("Enter your Name:")
+email = st.text_input("Enter your Email:")
+role = st.text_input("Enter your Role (e.g., Data Scientist, Developer):")
+bio = st.text_area("Enter a short bio about yourself:")
+
+# File uploader for profile picture
+profile_pic = st.file_uploader("Upload Profile Picture", type=["jpg", "png", "jpeg"])
+
+# Display user details after input
+if st.button("Save Profile"):
+    st.success("Profile Saved Successfully! 🎉")
+    
+    # Display user profile
+    st.write("### 📌 Your Profile")
+    st.write(f"**Name:** {name}")  
+    st.write(f"**Email:** {email}")  
+    st.write(f"**Role:** {role}")  
+    st.write(f"**Bio:** {bio}")  
+
+    # Display uploaded profile picture
+    if profile_pic:
+        st.image(profile_pic, caption="Your Profile Picture", use_column_width=True)
